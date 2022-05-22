@@ -1,0 +1,190 @@
+<html>
+    <head>
+    <body>
+        <h1> UNIDAD 4</h1>
+        <ul>
+            <li><a href="../index.html">INICIO</a></li>
+            <li> <a href = "../paginas/UNIDAD 1 .html">UNIDAD 1</a></li>
+            <li> <a href = "../paginas/UNIDAD 2.html">UNIDAD 2</a></li>
+            <li> <a href = "../paginas/UNIDAD 3.html">UNIDAD 3</a></li>
+            <li> <a href = "#">UNIDAD 4</a></li>
+         </ul>
+         <p>inicio de la unidad 4.</p>
+
+    </body>    
+    </head>
+<body>
+ <center><h2><b> Unidad 4 Procesamiento Paralelo.</b></h2></center>
+  <p><b>4.1 Aspectos Basicos de la computaci&oacute;n paralela</b></p>
+  La computaci&oacute;n paralela es una forma de c&oacute;mputo en la que muchas
+  instrucciones se ejecutan simult&aacute;neamente, operando sobre el
+  principio de que problemas grandes, a menudo se pueden dividir en
+  unos mas peque&ntilde;os, que luego son resueltos simultaneamente (en
+  paralelo). Hay varias formas diferentes de computaci&oacute;n paralela:
+  paralelismo a nivel de bit, paralelismo a nivel de instruccivn,
+  paralelismo de datos y paralelismo de tareas. El paralelismo se ha
+  empleado durante muchos a&ntilde;os, sobre todo en la computaci&oacute;n de
+  altas prestaciones, pero el interes en ella ha crecido ultimamente
+  debido a las limitaciones fisicas que impiden el aumento de la
+  frecuencia. Como el consumo de energa y por consiguiente la
+  generaci&oacute;n de calor de las computadoras constituye una
+  preocupaci&oacute;n en los ultimos a&ntilde;os, la computaci&oacute;n en paralelo se ha
+  convertido en el paradigma dominante en la arquitectura de
+  computadores, principalmente en forma de procesadores
+  multinucleo.
+  <center><img src="img /leyes.jpeg" alt=""></center>
+
+  Los programas informaticos paralelos son mas dificiles de escribir
+  que los secuenciales, porque la concurrencia introduce nuevos tipos
+  de errores de software, siendo las condiciones de carrera los mas
+  comunes. La comunicaci&oacute;n y sincronizaci&oacute;n entre diferentes
+  subtareas son algunos de los mayores obstaculos para obtener un
+  buen rendimiento del programa paralelo. La m&aacute;xima aceleraci&oacute;n
+  posible de un programa como resultado de la paralelizaci&oacute;n se
+  conoce como la ley de Amdahl.
+  
+  <p><b>Ley de Amdahl y ley de Gustafson</b></p>
+  Idealmente, la aceleraci&oacute;n a partir de la paralelizaci&oacute;n es lineal,
+  doblar el n&uacute;mero de elementos de procesamiento debe reducir a la
+  mitad el tiempo de ejecuci&oacute;n y doblarlo por segunda vez debe
+  nuevamente reducir el tiempo a la mitad. Sin embargo, muy pocos
+  algoritmos paralelos logran una aceleraci&oacute;n &oacute;ptima. La mayoria
+  tienen una aceleraci&oacute;n casi lineal para un peque&ntilde;o numero de
+  elementos de procesamiento, y pasa a ser constante para un gran
+  numero de elementos de procesamiento.
+  La aceleraci&oacute;n potencial de un algoritmo en una plataforma de
+  c&oacute;mputo en paralelo esta dada por la ley de Amdahl, formulada
+  originalmente por Gene Amdahl en la decada de 1960. Esta se&ntilde;ala
+  que una peque&ntilde;a porci&oacute;n del programa que no pueda paralelizarse
+  va a limitar la aceleraci&oacute;n que se logra con la paralelizaci&oacute;n. Los
+  programas que resuelven problemas matem&aacute;ticos o ingenieriles
+  tipicamente consisten en varias partes paralelizables y varias no
+  paralelizables (secuenciales).
+  
+  La ley de Gustafson es otra ley en computaci&oacute;n que esta en estrecha
+  relaci&oacute;n con la ley de Amdahl. Ambas leyes asumen que el tiempo
+  de funcionamiento de la parte secuencial del programa es
+  independiente del numero de procesadores. La ley de Amdahl
+  supone que todo el problema es de tama&ntilde;o fijo, por lo que la
+  cantidad total de trabajo que se hara en paralelo tambien es
+  independiente del numero de procesadores, mientras que la ley de
+  Gustafson supone que la cantidad total de trabajo que se har&aacute; en
+  paralelo varia linealmente con el numero de procesadores.
+  <p><b>Dependencias.</b></p>
+  Entender la dependencia de datos es fundamental en la
+  implementaci&oacute;n de algoritmos paralelos. Ningun programa puede
+  ejecutar mas r&aacute;pidamente que la cadena m&aacute;s larga de calculos
+  dependientes (conocida como la ruta critica), ya que los calculos que
+  dependen de calculos previos en la cadena deben ejecutarse en
+  orden. Sin embargo, la mayoria de los algoritmos no consisten s&oacute;lo
+  de una larga cadena de c&aacute;lculos dependientes; generalmente hay
+  oportunidades para ejecutar calculos independientes en paralelo.
+  Sea Pi y Pj dos segmentos del programa. Las condiciones de
+  Bernstein describen cuando los dos segmentos son independientes y
+  pueden ejecutarse en paralelo. Para Pi, sean Ii todas las variables de entrada y 
+  Oi las variables de salida, y del mismo modo para Pj. Pi y Pj 
+  son independientes si satisfacen.
+  
+  <center><img src="img /fotou3.jpeg" alt=""></center>
+  
+  Una violaci&oacute;n de la primera condici&oacute;n introduce una dependencia de
+  flujo, correspondiente al primer segmento que produce un resultado
+  utilizado por el segundo segmento. La segunda condici&oacute;n representa
+  una anti-dependencia, cuando el segundo segmento (Pj) produce una
+  variable que necesita el primer segmento (Pi). La tercera y ultima
+  condici&oacute;n representa una dependencia de salida: Cuando dos
+  segmentos escriben en el mismo lugar, el resultado viene del ultimo
+  segmento ejecutado.
+  
+<li><b>Condiciones de carrera, exclusi&oacute;n mutua, sincronizaci&oacute;n, y
+  desaceleraci&oacute;n paralela.</b></li>  
+  Las subtareas en un programa paralelo a menudo son llamadas hilos.
+  Algunas arquitecturas de computaci&oacute;n paralela utilizan versiones
+  mas peque&ntilde;as y ligeras de hilos conocidas como hebras, mientras
+  que otros utilizan versiones mas grandes conocidos como procesos.
+  Sin embargo, hilos es generalmente aceptado como un termino
+  generico para las subtareas. Los hilos a menudo tendran que
+  actualizar algunas variables que se comparten entre ellos. Las
+  instrucciones entre los dos programas pueden entrelazarse en
+  cualquier orden.
+  Las aplicaciones a menudo se clasifican segun la frecuencia con que
+  sus subtareas se sincronizan o comunican entre si. Una aplicaci&oacute;n
+  muestra un paralelismo de grano fino si sus subtareas deben
+  comunicase muchas veces por segundo, se considera paralelismo de
+  grano grueso si no se comunican muchas veces por segundo, y es
+  vergonzosamente paralelo si nunca o casi nunca se tienen que
+  comunicar.
+ <li> Aplicaciones vergonzosamente paralelas son consideradas las m&aacute;s
+  faciles de paralelizar.</li>
+  <li>Grano de paralelismo.</li>
+  <li>Muy grueso: Programas.</li>
+  <li>Grueso: Subprogramas, tareas.</li>
+  <li>Fino: Instrucci&oacute;n.</li>
+  <li>Muy fino: Fases de instrucci&oacute;n.</li>
+  
+<p><b>Modelos de consistencia.</b></p>
+  Los lenguajes de programaci&oacute;n en paralelo y computadoras paralelas
+  deben tener un modelo de consistencia de datos tambien conocido
+  como un modelo de memoria.
+  El modelo de consistencia define reglas para las operaciones en la
+  memoria del ordenador y c&oacute;mo se producen los resultados.
+  Uno de los primeros modelos de consistencia fue el modelo de
+  consistencia secuencial de Leslie Lamport. La consistencia
+  secuencial es la propiedad de un programa en la que su ejecuci&oacute;n en
+  paralelo produce los mismos resultados que un programa secuencial.
+  Especificamente, es un programa secuencial consistente si ""... los
+  resultados de una ejecuci&oacute;n son los mismos que se obtienen si las
+  operaciones de todos los procesadores son ejecutadas en un orden
+  secuencial, y las operaciones de cada procesador individual aparecen
+  en esta secuencia en el orden especificado por el programa".
+  
+  <p><b>Taxonomia de Flynn.</b></p>
+  Single Instruction, Single Data (SISD).
+  Hay un elemento de procesamiento, que tiene acceso a un unico
+  programa y a un almacenamiento de datos. En cada paso, el
+  elemento de procesamiento carga una instrucci&oacute;n y la informaci&oacute;n
+  correspondiente y ejecuta esta instrucci&oacute;n. El resultado es guardado
+  de vuelta en el almacenamiento de datos. Luego SISD es el
+  computador secuencial convencional, de acuerdo al modelo de von
+  Neumann.
+  <center><img src="img /SISD.JPEG" alt=""></center>
+  
+ <p><b> Multiple Instruction, Single Data (MISD).</b></p>
+  Hay multiples elementos de procesamiento, en el que cada cual tiene
+  memoria privada del programa, pero se tiene acceso comun a una
+  memoria global de informaci&oacute;n. En cada paso, cada elemento de
+  procesamiento de obtiene la misma informaci&oacute;n de la memoria y
+  carga una instrucci&oacute;n de la memoria privada del programa. Luego,
+  las instrucciones posiblemente diferentes de cada unidad, son
+  ejecutadas en paralelo, usando la informaci&oacute;n (identica) recibida
+  anteriormente. Este modelo es muy restrictivo y no se ha usado en
+  ningun computador de tipo comercial.
+  <center><img src="img /MISD.JPEG" alt=""></center>
+  
+<p><b>Single Instruction, Multiple Data (SIMD).</b></p>  
+  Hay multiples elementos de procesamiento, en el que cada cual tiene
+  acceso privado a la memoria de informaci&oacute;n (compartida o
+  distribuida). Sin embargo, hay una sola memoria de programa, desde
+  la cual una unidad de procesamiento especial obtiene y despacha
+  instrucciones. En cada paso, cada unidad de procesamiento obtiene
+  la misma instrucci&oacute;n y carga desde su memoria privada un elemento
+  de informaci&oacute;n y ejecuta esta instrucci&oacute;n en dicho elemento.
+  Entonces, la instrucci&oacute;n es s&iacute;ncronamente aplicada en paralelo por
+  todos los elementos de proceso a diferentes elementos de
+  informaci&oacute;n. Para aplicaciones con un grado significante de
+  paralelismo de informaci&oacute;n, este acercamiento puede ser muy
+  eficiente. Ejemplos pueden ser aplicaciones multimedia y algoritmos
+  de gr&oacute;ficos de computadora.
+  <center><img src="img /SIMD.JPEG" alt=""></center>
+  
+<p><b> Multiple Instruction, Multiple Data (MIMD).</b></p> 
+  Hay multiples unidades de procesamiento, en la cual cada una tiene
+  tanto instrucciones como informaci&oacute;n separada. Cada elemento
+  ejecuta una instrucci&oacute;n distinta en un elemento de informaci&oacute;n
+  distinto. Los elementos de proceso trabajan as&iacute;ncronamente. Los
+  clusters son ejemplo son ejemplos del modelo MIMD.
+  <center><img src="img /MIMD.jpeg" alt=""></center>
+
+
+ </body>    
+</html> 

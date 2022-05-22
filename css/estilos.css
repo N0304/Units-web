@@ -1,0 +1,36 @@
+nav{
+background-color:black
+}
+ul{
+    
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+}
+li{
+    color: black;
+    padding: 25px;
+}
+li :hover{
+
+    background-color: black
+}
+sub{
+    font-family:fantasy;
+    color:rgb(252, 188, 39);
+    font-size: 34px;
+}
+article{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(180, 252, 139, 0.874);
+    font-size: 22px;
+}    
+base{
+    color: gray;
+}
+{
+
+}

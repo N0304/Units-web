@@ -1,0 +1,153 @@
+<html>
+    <head>
+    <body>
+        <h1> UNIDAD 1</h1>
+        <ul>
+            <li><a href="../index.html">INICIO</a></li>
+            <li> <a href = "#">UNIDAD 1</a></li>
+            <li> <a href = "../paginas/UNIDAD 2.html">UNIDAD 2</a></li>
+            <li> <a href = "../paginas/UNIDAD 3.html">UNIDAD 3</a></li>
+            <li> <a href = "../paginas/UNIDAD 4.html">UNIDAD 4</a></li>
+         </ul>
+         <p>inicio de la unidad 1.</p>
+    </body>    
+    </head>
+    <p>Arquitectura de Computadoras.
+Arquitectura de computadoras. Es el dise&ntilde;o y la
+organizaci&oacute;n de un sistema para un equipo de c&oacute;mputo.
+Es un modelo y descripci&oacute;n de cada funci&oacute;n, as&iacute; como los
+requerimientos y las implementaciones de dise&ntilde;o para varias
+partes del equipo de c&oacute;mputo.
+Principalmente enfocamos en la Unidad Central de
+Procesamiento lo conocemos como (CPU) el cual trabaja
+internamente y accede a las direcciones de memoria y a los
+sistemas de entrada salida, perif&eacute;ricos.
+Tambien suele definirse como la selecci&oacute;n e interconexi&oacute;n
+de los componentes de hardware para crear computadoras
+seg&uacute;n los requerimientos de funcionalidad, rendimiento y
+costo.
+El equipo de c&oacute;mputo recibe y env&iacute;a la informaci&oacute;n a trav&eacute;s
+de los perif&eacute;ricos por medio de los canales de distribuci&oacute;n o
+buses (cableado f&iacute;sico de interconexi&oacute;n).
+
+El CPU se encarga de procesar la informaci&oacute;n que le llega al
+equipo de c&oacute;mputo.
+El intercambio de informaci&oacute;n se tiene que hacer con los
+perif&eacute;ricos y el CPU.
+
+Todas aquellas unidades de un sistema exceptuando el CPU
+se denomina perif&eacute;rico, por lo que el equipo de c&oacute;mputo
+tiene dos partes bien diferenciadas, que son: el CPU (se
+encarga de ejecutar programas y que est&aacute; compuesta por la
+memoria principal, la (ALU) Unidad Aritm&eacute;tica L&oacute;gica y la
+(UC) unidad de control) y los perif&eacute;ricos (que pueden ser de
+entrada, salida, entrada-salida y las interconexiones).
+    </p>
+<subtitle> <center> <b> Modelos de Arquitectura Cl&aacute;sicas.</b> </center></subtitle>    
+<p>
+    Estas arquitecturas se desarrollaron en las primeras
+computadoras electromec&aacute;nicas y de tubos de vac&iacute;o.
+Hay dos arquitecturas distintas relacionadas con el uso y
+distribuci&oacute;n de la memoria: Arquitectura de Jonh Von
+Neumman y Arquitectura Harvard.
+</p>
+<subtitle><center><b>Arquitectura Von Neumann</b></center></subtitle>
+<p>Tradicionalmente los sistemas con microprocesadores se
+    basan en esta arquitectura, en la cual la unidad central de
+    proceso (CPU), est&aacute; conectada a una memoria principal
+    &uacute;nica (casi siempre s&oacute;lo RAM) donde se guardan las
+    instrucciones del programa y los datos. A dicha memoria se
+    accede a trav&eacute;s de un sistema interconexi&oacute;n de buses &uacute;nico
+    (control, direcciones y datos).En un sistema con arquitectura Von Neumann el tama&ntilde;o de
+    la unidad de datos o instrucciones est&aacute; fijado por el ancho
+    del bus que comunica la memoria con la CPU. As&iacute; un
+    microprocesador de 8 bits con un bus de 8 bits, tendr&aacute; que
+    manejar datos e instrucciones de una o m&eacute;s unidades de 8
+    bits (bytes) de longitud.
+    Si tiene que acceder a una instrucci&oacute;n o dato de m&eacute;s de un
+    byte de longitud, tendr&eacute; que realizar m&eacute;s de un acceso a la
+    memoria.
+    El tener un &uacute;nico bus hace que el microprocesador sea m&aacute;s
+    lento en su respuesta, ya que no puede buscar en memoria
+    una nueva instrucci&oacute;n mientras no finalicen las
+    transferencias de datos de la instrucci&oacute;n anterior.
+    
+    Las computadoras digitales convencionales presentan un
+    aspecto Von Neumann. Este modelo consta de cinco
+    componentes principales.</p>
+    <ul>
+        <li> Unidad de Memoria</li>
+        <li> Unidad de Enrada/Salida</li>
+        <li> Unidad de control Incluidos CPU</li>
+        <li> Unidad Aritmetica Logica Incluida en CPU</li>
+        <li> Registros de Programas Incluidos CPU</li>
+    </ul>
+    <center><img src="img /imagen.jpeg" alt=""></center>
+
+    <subtitle><center><b>Modelo Von Neumann.</b></center></subtitle>
+     <p>Las instrucciones provenientes del sistema de entrada, son
+        almacenados por la memoria, procesados por la ALU bajo la
+        direcci&oacute;n de la unidad de control. Los resultados obtenidos
+        son enviados a la unidad de salida.
+        El programa almacenado es lo más importante en el modelo.
+        Los programas se almacenan en la memoria del equipo junto
+        con los datos a procesar.
+        En las computadoras de programa almacenado, el programa
+        puede manipularse como si se tratara de datos. Este concepto
+        da origen a los compiladores, sistemas operativos y es la
+        base de la gran versatilidad de las computadoras modernas.</p> 
+
+    <subtitle><center><b>Limitaciones Von Neumann</b></center></subtitle>
+    <p>La longitud de las instrucciones por el bus de datos, que hace
+        que el microprocesador tenga que realizar varios accesos a
+        memoria para buscar instrucciones complejas.
+        La velocidad de operaci&oacute;n a causa del bus &uacute;nico para datos e
+        instrucciones que no deja acceder simult&aacute;neamente a unos y
+        otras, lo cual impide superponer ambos tiempos de acceso.</p>
+
+        <subtitle><center><b>Modelo Harvard</b></center></subtitle>
+    <p>Esta arquitectura utiliza los Micro controladores, tiene la
+        unidad central de proceso (CPU) conectada a dos memorias
+        (una con las instrucciones y otra con los datos) por medio de
+        dos buses diferentes.
+        Una de las memorias contiene solamente las instrucciones
+        del programa (Memoria de Programa), y la otra s&oacute;lo
+        almacena datos (Memoria de Datos).
+        Ambos buses son totalmente independientes lo que permite
+        que la CPU pueda acceder de forma independiente y
+        simult&aacute;nea a la memoria de datos y a la de instrucciones.
+        Como los buses son independientes estos pueden tener
+        distintos contenidos en la misma direcci&oacute;n y tambi&eacute;n distinta
+        longitud.
+        Tambi&eacute;n la longitud de los datos y las instrucciones puede
+        ser distinta, lo que optimiza el uso de la memoria en general.
+        Para un procesador de Set de Instrucciones Reducido, o
+        RISC (Reduced Instrucci&oacute;n Set Computer), el set de
+        instrucciones y el bus de memoria de programa pueden
+        
+        dise&ntilde;arse de tal manera que todas las instrucciones tengan
+        una sola posici&oacute;n de memoria de programa de longitud.
+        Adem&aacute;s, al ser los buses independientes, el CPU puede
+        acceder a los datos para completar la ejecuci&oacute;n de una
+        instrucci&oacute;n, y al mismo tiempo leer la siguiente instrucci&oacute;n a
+        ejecutar.</p>
+        <center><img src="img /busDePrograma.jpeg" alt=""></center>
+        <p>El tama&ntilde;o de las instrucciones no est&aacute; relacionado con el de
+            los datos, y por lo tanto puede ser optimizado para que
+            cualquier instrucci&oacute;n ocupe una sola posici&oacute;n de memoria de
+            programa, logrando as&iacute; mayor velocidad y menor longitud de
+            programa.
+            El tiempo de acceso a las instrucciones puede superponerse
+            con el de los datos, logrando una mayor velocidad en cada
+            operaci&oacute;n.
+            La principal desventaja de esta arquitectura; el bus de datos
+            y direcciones &uacute;nico se convierte en un cuello de botella por
+            el cual debe pasar toda la informaci&oacute;n que se lee de o se
+            
+            escribe a la memoria, obligando a que todos los accesos a
+            esta sean secuenciales.
+            Limita el grado de paralelismo (acciones que se pueden
+            realizar al mismo tiempo) y por lo tanto, el desempe&ntilde;o de la
+            computadora.</p>
+
+</html>
